@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import AppleLogo from './assets/applePixels.png';
 import Monitor from './assets/oldMonitor.png';
+import useFeedbackApi from './hooks/useFeedbackApi';
 import useInterval from './hooks/useInterval';
+import { Rate } from './Rate';
 
 const canvasX = 1000;
 const canvasY = 1000;
@@ -22,6 +24,8 @@ const App = () => {
   const [delay, setDelay] = useState<number | null>(null);
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
+  const [rating, setRating] = useState<number>(0);
+  const { postRating } = useFeedbackApi();
 
   useInterval(() => runGame(), delay);
 
@@ -108,6 +112,11 @@ const App = () => {
     }
   }
 
+  function handleChangeRating(rating: number) {
+    postRating(rating);
+    setRating(rating);
+  }
+
   return (
     <div onKeyDown={e => changeDirection(e)}>
       <img id="fruit" src={AppleLogo} alt="fruit" width="30" />
@@ -125,6 +134,8 @@ const App = () => {
       <div className="scoreBox">
         <h2>Score: {score}</h2>
         <h2>High Score: {localStorage.getItem('snakeScore')}</h2>
+
+        <Rate score={rating} onChange={handleChangeRating} />
       </div>
     </div>
   );
