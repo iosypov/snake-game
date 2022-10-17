@@ -1,6 +1,8 @@
 # Sample project with FeedbackApi
 
-Used `blips-and-chitz-feedback-api-sdk` package. 
+Used [`blips-and-chitz-feedback-api-sdk`](https://www.npmjs.com/package/blips-and-chitz-feedback-api-sdk) package. 
+
+[Demo](https://strong-cobbler-c29afe.netlify.app/)
 
 You can rate game, give 1-5 stars.
 
@@ -17,14 +19,15 @@ In code implemented in [`Rate.tsx`](./src/Rate.tsx) which used [`useFeedbackApi`
 
 ## Setup
 
-```code
-# Clone this repo
-git clone https://github.com/hesbon-osoro/snake-game.git
 
-# Navigate to directory and install packages
+### Navigate to directory and install packages
+
+```
 cd snake-game && yarn
+```
 
-# Start the App
+### Start the App
+```
 yarn start
 
 ```
