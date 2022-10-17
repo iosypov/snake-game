@@ -10,10 +10,6 @@ In code implemented in [`Rate.tsx`](./src/Rate.tsx) which used [`useFeedbackApi`
 
 [![Snake Game](assets/snake-game.png)](https://snake-game-ts.netlify.app/)
 
-[![Over](assets/snake-game-over.png)](https://snake-game-ts.netlify.app/)
-
-A Snake Game in React and TypeScript
-
 ## Technologies
 
 - React
