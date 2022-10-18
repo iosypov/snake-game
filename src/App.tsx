@@ -24,7 +24,7 @@ const App = () => {
   const [delay, setDelay] = useState<number | null>(null);
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
-  const [rating, setRating] = useState<number>(0);
+  const [rating, setRating] = useState<number | string>(localStorage.getItem("gameRating") ?? 0);
   const { postRating } = useFeedbackApi();
 
   useInterval(() => runGame(), delay);
@@ -115,6 +115,7 @@ const App = () => {
   function handleChangeRating(rating: number) {
     postRating(rating);
     setRating(rating);
+    localStorage.setItem("gameRating", `${rating}`);
   }
 
   return (
@@ -135,7 +136,7 @@ const App = () => {
         <h2>Score: {score}</h2>
         <h2>High Score: {localStorage.getItem('snakeScore')}</h2>
 
-        <Rate score={rating} onChange={handleChangeRating} />
+        <Rate score={+rating} onChange={handleChangeRating} />
       </div>
     </div>
   );
