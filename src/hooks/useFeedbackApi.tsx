@@ -10,7 +10,7 @@ function useFeedbackApi() {
   function postRating(rating: number) {
     publicController.createFeedback({
       rating,
-      page: 'snake',
+      tags: ["snake-game"]
     });
   }
   return { postRating };
