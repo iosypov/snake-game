@@ -2911,10 +2911,10 @@ binary-extensions@^2.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
-blips-and-chitz-feedback-api-sdk@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/blips-and-chitz-feedback-api-sdk/-/blips-and-chitz-feedback-api-sdk-1.0.2.tgz#b74a3147318c05aec6dd95f326188c3a837d7b85"
-  integrity sha512-eQc12xq2Bom6a9yesjrPul35T/NadmEYIuyledpteIvY/DpNQ9Jt7ICr/sdJqLEVYzhqjcwrpiMfM1AEs9EUWg==
+blips-and-chitz-feedback-api-sdk@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/blips-and-chitz-feedback-api-sdk/-/blips-and-chitz-feedback-api-sdk-1.0.3.tgz#f6060a09b1121441b5e143a134a5fdbbfa933c68"
+  integrity sha512-pXUO6JjJmn0SUf2ijWamRPdb6oNpr3+8qtsXuPwtNPTq0b6mjUdgJxA46cV/MBLn05lL8pFvNE20r97T5+11ZA==
   dependencies:
     "@apimatic/core" "^0.7.9"
     "@apimatic/schema" "^0.6.0"
