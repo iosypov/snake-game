@@ -1,33 +1,28 @@
-# Sample project with FeedbackApi
-
-Used [`blips-and-chitz-feedback-api-sdk`](https://www.npmjs.com/package/blips-and-chitz-feedback-api-sdk) package. 
+# Sample project with `FeedbackApi`
 
 [Demo](https://strong-cobbler-c29afe.netlify.app/)
 
-You can rate game, give 1-5 stars.
+It is react js application with [`Feedback API`](https://rapidapi.com/blips-and-chitz-blips-and-chitz-default/api/feedback-api5) integration by using [SDK](https://www.npmjs.com/package/blips-and-chitz-feedback-api-sdk) package. 
+
+In this sample you can rate game, give for 1 to 5 stars.
 
 In code implemented in [`Rate.tsx`](./src/Rate.tsx) which used [`useFeedbackApi`](./src/hooks/useFeedbackApi.tsx) hook.
 
+
+
 # Snake Game
 
-[![Snake Game](assets/snake-game.png)](https://snake-game-ts.netlify.app/)
+[![Snake Game](assets/snake-game.png)](https://strong-cobbler-c29afe.netlify.app/)
 
 ## Technologies
 
 - React
 - TypeScript
 
-## Setup
+## Start
 
-
-### Navigate to directory and install packages
-
-```
-cd snake-game && yarn
-```
-
-### Start the App
-```
-yarn start
-
-```
+1. Make `.env` file from `.dist.env`. Change `REACT_APP_RAPID_API_KEY` to your Rapid Api Key.
+1. Install dependencies  
+`yarn`
+1. Run  
+`yarn start`
