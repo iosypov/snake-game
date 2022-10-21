@@ -24,7 +24,9 @@ const App = () => {
   const [delay, setDelay] = useState<number | null>(null);
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
-  const [rating, setRating] = useState<number | string>(localStorage.getItem("gameRating") ?? 0);
+  const [rating, setRating] = useState<number | string>(
+    localStorage.getItem('gameRating') ?? 0
+  );
   const { postRating } = useFeedbackApi();
 
   useInterval(() => runGame(), delay);
@@ -95,7 +97,9 @@ const App = () => {
     }
     setSnake(newSnake);
   }
-  function changeDirection(e: React.KeyboardEvent<HTMLDivElement>) {
+  function changeDirection(
+    e: KeyboardEvent
+  ) {
     switch (e.key) {
       case 'ArrowLeft':
         setDirection([-1, 0]);
@@ -115,11 +119,18 @@ const App = () => {
   function handleChangeRating(rating: number) {
     postRating(rating);
     setRating(rating);
-    localStorage.setItem("gameRating", `${rating}`);
+    localStorage.setItem('gameRating', `${rating}`);
   }
 
+  useEffect(() => {
+    document.body.addEventListener('keydown', changeDirection);
+    return () => {
+      document.body.removeEventListener('keydown', changeDirection);
+    }
+  }, []);
+
   return (
-    <div onKeyDown={e => changeDirection(e)}>
+    <div>
       <img id="fruit" src={AppleLogo} alt="fruit" width="30" />
       <img src={Monitor} alt="fruit" width="4000" className="monitor" />
       <canvas
